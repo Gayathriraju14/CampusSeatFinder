@@ -1,0 +1,61 @@
+{
+  "buildings": [
+    {
+      "id": "J12",
+      "name": "J12 — Belinda Hutchinson Building",
+      "rooms": [
+        {
+          "id": "J12-201",
+          "type_mix": ["desk_only", "monitor_usb"],
+          "spaces": [
+            { "id": "J12-201-01", "type": "desk_only", "occupied": false },
+            { "id": "J12-201-02", "type": "desk_only", "occupied": true },
+            { "id": "J12-201-03", "type": "monitor_usb", "occupied": false }
+          ]
+        },
+        {
+          "id": "J12-202",
+          "type_mix": ["unikey_pc"],
+          "spaces": [
+            { "id": "J12-202-01", "type": "unikey_pc", "occupied": false },
+            { "id": "J12-202-02", "type": "unikey_pc", "occupied": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "J03",
+      "name": "J03 — SciTech Library",
+      "rooms": [
+        {
+          "id": "J03-101",
+          "type_mix": ["desk_only"],
+          "spaces": [
+            { "id": "J03-101-01", "type": "desk_only", "occupied": true },
+            { "id": "J03-101-02", "type": "desk_only", "occupied": false },
+            { "id": "J03-101-03", "type": "desk_only", "occupied": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "name": "A02 — Fisher Library",
+      "rooms": [
+        {
+          "id": "A02-3F",
+          "type_mix": ["monitor_usb", "unikey_pc"],
+          "spaces": [
+            { "id": "A02-3F-01", "type": "monitor_usb", "occupied": true },
+            { "id": "A02-3F-02", "type": "unikey_pc", "occupied": false }
+          ]
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "J12": ["J03", "A02"],
+    "J03": ["J12"],
+    "A02": ["J12"]
+  }
+}
